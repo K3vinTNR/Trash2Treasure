@@ -347,6 +347,7 @@ export const remindersAPI = {
     const newReminder = {
       id: MOCK_REMINDERS.length + 1,
       ...reminderData,
+      description: reminderData.description || '',
       is_active: true,
     };
     MOCK_REMINDERS.push(newReminder);
