@@ -1,62 +1,95 @@
-# Trash2Treasure Project
+# Trash2Treasure - Demo Version
 
-## Project info
+## Overview
 
-T2T Rewards - A rewards management application.
+**Trash2Treasure (T2T)** is a gamified waste management rewards application demo. This is a **frontend-only demo** with hardcoded mock data to showcase the user interface and user experience without requiring a backend server or database.
 
-## How can I edit this code?
+## Features
 
-You can clone this repo and push changes using your preferred IDE.
+- 🔐 **Authentication** - Login/Register (mock authentication)
+- 📱 **QR Code Scanner** - Scan QR codes to earn points
+- 🏆 **Rewards System** - Browse and redeem rewards with points
+- 📊 **Points History** - Track your points earning and spending
+- ⏰ **Reminders** - Set waste disposal reminders
+- 👤 **User Profile** - View and edit profile information
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Demo Credentials
 
-Follow these steps:
+Since this is a demo, you can login with **any email and password**. All data is hardcoded and stored in localStorage.
+
+Example:
+- Email: `demo@trash2treasure.com`
+- Password: `anything`
+
+## Tech Stack
+
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **UI Components**: shadcn/ui (Radix UI + Tailwind CSS)
+- **Routing**: React Router DOM
+- **QR Scanner**: html5-qrcode
+- **Icons**: Lucide React
+- **Styling**: Tailwind CSS
+
+## Installation
+
+### Prerequisites
+- Node.js 18+ and npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+### Steps
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd trash2treasure
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Build for Production
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project using various hosting platforms like Vercel, Netlify, or GitHub Pages.
-
-Build the project first:
 ```sh
+# Build the project
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-Then deploy the `dist` folder to your preferred hosting platform.
+## Deployment
+
+Deploy the `dist` folder to any static hosting platform:
+- **Vercel** - `vercel --prod`
+- **Netlify** - Drag and drop `dist` folder
+- **GitHub Pages** - Push `dist` folder to gh-pages branch
+
+## Mock Data
+
+All data is hardcoded in [`src/services/api.ts`](src/services/api.ts):
+- Mock user with 1250 points
+- 5 rewards with different point requirements
+- Points history with scan and redemption records
+- 2 pre-configured reminders
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── pages/           # Page components (screens)
+├── services/        # API service with mock data
+├── lib/             # Utilities
+└── hooks/           # Custom React hooks
+```
+
+## License
+
+MIT License
