@@ -74,7 +74,7 @@ const RewardsScreen: React.FC = () => {
         <div className="relative z-10 flex items-center justify-between mb-6">
           <div>
             <p className="text-white/70 text-sm">Good morning!</p>
-            <h1 className="text-white text-xl font-bold">Treasure Hunter</h1>
+            <h1 className="text-white text-xl font-bold">Trashure Hunters</h1>
           </div>
           <div className="flex items-center gap-3">
             <button 
